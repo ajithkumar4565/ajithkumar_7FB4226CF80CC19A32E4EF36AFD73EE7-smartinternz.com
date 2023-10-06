@@ -1,9 +1,22 @@
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
+# Define the base class Player
+class Player:
+    def play(self):
+        print("The player is playing cricket.")
 
-num = int(input("Enter a number: "))
-result = factorial(num)
-print("The factorial of", num, "is", result)
+# Define the derived class Batsman
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting.")
+
+# Define the derived class Bowler
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling.")
+
+# Create objects of Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
+
+# Call the play() method for each object
+batsman.play()
+bowler.play()
